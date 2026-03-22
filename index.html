@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ammo Deals | Telegram Guarantor</title>
+    <title>ammodeals | Telegram Guarantor</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,19 +21,21 @@
 
     <div class="container-main">
         <header class="nav-header">
-            <button onclick="toggleLang()" class="lang-toggle" id="lang-btn">English</button>
+            <button onclick="toggleLang()" class="lang-toggle" id="lang-btn">
+                English
+            </button>
         </header>
 
         <section class="hero-section">
             <div class="avatar-wrapper">
                 <div class="avatar-bg-glow">
-                    <img src="https://picsum.photos/seed/galaxy/400/400" alt="">
+                    <img src="ava.png" alt="" onerror="this.src='https://picsum.photos/seed/galaxy/400/400'">
                 </div>
                 <div class="avatar-inner">
-                    <img src="https://picsum.photos/seed/galaxy/400/400" alt="Ammo Deals">
+                    <img src="ava.png" alt="Avatar" onerror="this.src='https://picsum.photos/seed/galaxy/400/400'">
                 </div>
             </div>
-            <h1 class="title">Ammo Deals</h1>
+            <h1 class="title">ammodeals</h1>
             <div class="badge-row">
                 <i data-lucide="shield-check" class="icon-blue"></i>
                 <span class="badge-text" data-t="role">Telegram Гарант</span>
@@ -45,7 +47,7 @@
             <div class="glass-card-inner p-6">
                 <h2 class="text-xl font-black italic mb-4 tracking-tight" data-t="trustTitle">Кто такой гарант?</h2>
                 <div class="space-y-4 text-[13px] text-white/50 leading-relaxed">
-                    <p data-t="trustP1">Гарант — это лицо, которое официально подтверждает выполнение обязательств. Проведено более 800+ успешных сделок.</p>
+                    <p data-t="trustP1">Гарант — это физическое лицо, компания или организация, которые официально подтверждают выполнение обязательств одной стороны перед другой. Проведено более 800+ успешных сделок.</p>
                     <div class="grid grid-cols-2 gap-3">
                         <div class="bg-white/[0.03] p-3 rounded-xl border border-white/5">
                             <p class="text-blue-500 font-black text-lg">800+</p>
@@ -96,12 +98,12 @@
                 </div>
             </a>
 
-            <a href="https://t.me/ruchammodeals" target="_blank" class="link-item border-segments">
+            <a href="https://t.me/ammodeals" target="_blank" class="link-item border-segments">
                 <div class="glass-card-inner flex items-center gap-4 p-3">
                     <div class="icon-box"><i data-lucide="user"></i></div>
                     <div class="link-content">
                         <h3 data-t="chan4">Личный контакт</h3>
-                        <p>@ruchammodeals</p>
+                        <p>@ammodeals</p>
                     </div>
                     <i data-lucide="chevron-right" class="arrow"></i>
                 </div>
@@ -114,9 +116,14 @@
                     <div class="icon-circle"><i data-lucide="zap"></i></div>
                     <h2 class="text-xl font-black italic" data-t="commissionTitle">Гарант сделок</h2>
                 </div>
-                <p class="text-[13px] text-white/50 mb-4" data-t="commissionText">Безопасность ваших активов — мой главный приоритет.</p>
+                <p class="text-[13px] text-white/50 mb-4" data-t="commissionText">Безопасность ваших активов — мой главный приоритет. Работаю честно и быстро.</p>
                 <div class="tag-blue"><span data-t="commissionRate">Комиссия — 2%</span></div>
             </div>
+        </section>
+
+        <section class="steps-section">
+            <h2 class="section-title" data-t="howItWorksTitle">Как проходят сделки</h2>
+            <div class="steps-list space-y-2" id="steps-container"></div>
         </section>
 
         <section class="wallet-section border-segments">
@@ -130,12 +137,13 @@
         </section>
 
         <footer class="footer-action">
-            <a href="https://t.me/ruchammodeals" target="_blank" class="main-btn shimmer">
-                <span data-t="contactBtn">Связаться с Ammo Deals</span>
+            <a href="https://t.me/ammodeals" target="_blank" class="main-btn shimmer">
+                <span data-t="contactBtn">Связаться с ammodeals</span>
             </a>
-            <p class="copyright">© Ammo Deals 2026</p>
+            <p class="copyright">© ammodeals 2026</p>
         </footer>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
