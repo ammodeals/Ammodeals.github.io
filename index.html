@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammo Deals | Telegram Guarantor</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="lang-ru">
+    <div class="noise"></div>
+    <div id="floating-container" class="floating-container"></div>
+
+    <div class="container-main">
+        <header class="nav-header">
+            <button onclick="toggleLang()" class="lang-toggle" id="lang-btn">English</button>
+        </header>
+
+        <section class="hero-section">
+            <div class="avatar-wrapper">
+                <div class="avatar-bg-glow">
+                    <img src="https://picsum.photos/seed/galaxy/400/400" alt="">
+                </div>
+                <div class="avatar-inner">
+                    <img src="https://picsum.photos/seed/galaxy/400/400" alt="Ammo Deals">
+                </div>
+            </div>
+            <h1 class="title">Ammo Deals</h1>
+            <div class="badge-row">
+                <i data-lucide="shield-check" class="icon-blue"></i>
+                <span class="badge-text" data-t="role">Telegram Гарант</span>
+            </div>
+            <p class="subtitle" data-t="subtitle">Безопасные сделки | Комиссия 2%</p>
+        </section>
+
+        <section class="trust-section border-segments">
+            <div class="glass-card-inner p-6">
+                <h2 class="text-xl font-black italic mb-4 tracking-tight" data-t="trustTitle">Кто такой гарант?</h2>
+                <div class="space-y-4 text-[13px] text-white/50 leading-relaxed">
+                    <p data-t="trustP1">Гарант — это лицо, которое официально подтверждает выполнение обязательств. Проведено более 800+ успешных сделок.</p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-white/[0.03] p-3 rounded-xl border border-white/5">
+                            <p class="text-blue-500 font-black text-lg">800+</p>
+                            <p class="text-[8px] uppercase tracking-widest opacity-40" data-t="stat1">Сделок</p>
+                        </div>
+                        <div class="bg-white/[0.03] p-3 rounded-xl border border-white/5">
+                            <p class="text-blue-500 font-black text-lg">100%</p>
+                            <p class="text-[8px] uppercase tracking-widest opacity-40" data-t="stat2">Выплат</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="links-grid">
+            <p class="section-label" data-t="channelsTitle">Навигация</p>
+            
+            <a href="https://t.me/ammodealsnews" target="_blank" class="link-item border-segments">
+                <div class="glass-card-inner flex items-center gap-4 p-3">
+                    <div class="icon-box"><i data-lucide="radio"></i></div>
+                    <div class="link-content">
+                        <h3 data-t="chan1">Новостной канал</h3>
+                        <p>@ammodealsnews</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="arrow"></i>
+                </div>
+            </a>
+
+            <a href="https://t.me/ammorbio" target="_blank" class="link-item border-segments">
+                <div class="glass-card-inner flex items-center gap-4 p-3">
+                    <div class="icon-box"><i data-lucide="link"></i></div>
+                    <div class="link-content">
+                        <h3 data-t="chan2">Адаптер</h3>
+                        <p>@ammorbio</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="arrow"></i>
+                </div>
+            </a>
+
+            <a href="https://t.me/repaamorza" target="_blank" class="link-item border-segments">
+                <div class="glass-card-inner flex items-center gap-4 p-3">
+                    <div class="icon-box"><i data-lucide="star"></i></div>
+                    <div class="link-content">
+                        <h3 data-t="chan3">Отзывы</h3>
+                        <p>@repaamorza</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="arrow"></i>
+                </div>
+            </a>
+
+            <a href="https://t.me/ruchammodeals" target="_blank" class="link-item border-segments">
+                <div class="glass-card-inner flex items-center gap-4 p-3">
+                    <div class="icon-box"><i data-lucide="user"></i></div>
+                    <div class="link-content">
+                        <h3 data-t="chan4">Личный контакт</h3>
+                        <p>@ruchammodeals</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="arrow"></i>
+                </div>
+            </a>
+        </section>
+
+        <section class="commission-box border-segments">
+            <div class="glass-card-inner p-6">
+                <div class="box-header flex items-center gap-4 mb-4">
+                    <div class="icon-circle"><i data-lucide="zap"></i></div>
+                    <h2 class="text-xl font-black italic" data-t="commissionTitle">Гарант сделок</h2>
+                </div>
+                <p class="text-[13px] text-white/50 mb-4" data-t="commissionText">Безопасность ваших активов — мой главный приоритет.</p>
+                <div class="tag-blue"><span data-t="commissionRate">Комиссия — 2%</span></div>
+            </div>
+        </section>
+
+        <section class="wallet-section border-segments">
+            <div class="glass-card-inner p-5">
+                <p class="section-label mb-3" data-t="paymentTitle">Реквизиты</p>
+                <div class="wallet-box">
+                    <code id="wallet-address">UQAZUifFf0eqc8rvMT6SS5RzQelEFSk2AHl93-jAMrsxhprl</code>
+                    <button onclick="copyWallet()" id="copy-btn" data-t="copy">Copy</button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-action">
+            <a href="https://t.me/ruchammodeals" target="_blank" class="main-btn shimmer">
+                <span data-t="contactBtn">Связаться с Ammo Deals</span>
+            </a>
+            <p class="copyright">© Ammo Deals 2026</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
