@@ -4,146 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ammodeals | Telegram Guarantor</title>
-    
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
-<body class="lang-ru">
+<body>
     <div class="noise"></div>
-    <div id="floating-container" class="floating-container"></div>
+    <div class="glow-top"></div>
 
-    <div class="container-main">
-        <header class="nav-header">
-            <button onclick="toggleLang()" class="lang-toggle" id="lang-btn">
-                English
-            </button>
+    <div class="lang-switcher">
+        <button id="lang-btn" class="lang-btn" onclick="toggleLanguage()">EN</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="avatar-container">
+                <img src="ava.png" alt="Avatar" class="avatar" onerror="this.src='https://picsum.photos/seed/galaxy/400/400'">
+            </div>
+            <div class="role-badge" id="role">Telegram Гарант</div>
+            <h1 class="name">ammodeals</h1>
+            <p class="subtitle" id="subtitle">Безопасные сделки | Комиссия 2%</p>
         </header>
 
-        <section class="hero-section">
-            <div class="avatar-wrapper">
-                <div class="avatar-bg-glow">
-                    <img src="ava.png" alt="" onerror="this.src='https://picsum.photos/seed/galaxy/400/400'">
-                </div>
-                <div class="avatar-inner">
-                    <img src="ava.png" alt="Avatar" onerror="this.src='https://picsum.photos/seed/galaxy/400/400'">
-                </div>
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">800+</div>
+                <div class="stat-label" id="stat-deals-label">Успешных сделок</div>
             </div>
-            <h1 class="title">ammodeals</h1>
-            <div class="badge-row">
-                <i data-lucide="shield-check" class="icon-blue"></i>
-                <span class="badge-text" data-t="role">Telegram Гарант</span>
-            </div>
-            <p class="subtitle" data-t="subtitle">Безопасные сделки | Комиссия 2%</p>
-        </section>
-
-        <section class="trust-section border-segments">
-            <div class="glass-card-inner p-6">
-                <h2 class="text-xl font-black italic mb-4 tracking-tight" data-t="trustTitle">Кто такой гарант?</h2>
-                <div class="space-y-4 text-[13px] text-white/50 leading-relaxed">
-                    <p data-t="trustP1">Гарант — это физическое лицо, компания или организация, которые официально подтверждают выполнение обязательств одной стороны перед другой. Проведено более 800+ успешных сделок.</p>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="bg-white/[0.03] p-3 rounded-xl border border-white/5">
-                            <p class="text-blue-500 font-black text-lg">800+</p>
-                            <p class="text-[8px] uppercase tracking-widest opacity-40" data-t="stat1">Сделок</p>
-                        </div>
-                        <div class="bg-white/[0.03] p-3 rounded-xl border border-white/5">
-                            <p class="text-blue-500 font-black text-lg">100%</p>
-                            <p class="text-[8px] uppercase tracking-widest opacity-40" data-t="stat2">Выплат</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="stat-card">
+                <div class="stat-value">100%</div>
+                <div class="stat-label" id="stat-payouts-label">Выплат</div>
             </div>
         </section>
 
-        <section class="links-grid">
-            <p class="section-label" data-t="channelsTitle">Навигация</p>
+        <section class="links-section">
+            <h2 class="section-title" id="channels-title">Основные каналы</h2>
             
-            <a href="https://t.me/ammodealsnews" target="_blank" class="link-item border-segments">
-                <div class="glass-card-inner flex items-center gap-4 p-3">
-                    <div class="icon-box"><i data-lucide="radio"></i></div>
-                    <div class="link-content">
-                        <h3 data-t="chan1">Новостной канал</h3>
-                        <p>@ammodealsnews</p>
-                    </div>
-                    <i data-lucide="chevron-right" class="arrow"></i>
+            <a href="https://t.me/ammorbio" class="link-card" target="_blank">
+                <div class="link-icon"><i data-lucide="activity"></i></div>
+                <div class="link-info">
+                    <h3 id="adapter-title">Адаптер</h3>
+                    <p>@ammorbio</p>
                 </div>
             </a>
 
-            <a href="https://t.me/ammorbio" target="_blank" class="link-item border-segments">
-                <div class="glass-card-inner flex items-center gap-4 p-3">
-                    <div class="icon-box"><i data-lucide="link"></i></div>
-                    <div class="link-content">
-                        <h3 data-t="chan2">Адаптер</h3>
-                        <p>@ammorbio</p>
-                    </div>
-                    <i data-lucide="chevron-right" class="arrow"></i>
+            <a href="https://t.me/repaamorza" class="link-card" target="_blank">
+                <div class="link-icon"><i data-lucide="star"></i></div>
+                <div class="link-info">
+                    <h3 id="reviews-title">Отзывы со сделок</h3>
+                    <p>@repaamorza</p>
                 </div>
             </a>
 
-            <a href="https://t.me/repaamorza" target="_blank" class="link-item border-segments">
-                <div class="glass-card-inner flex items-center gap-4 p-3">
-                    <div class="icon-box"><i data-lucide="star"></i></div>
-                    <div class="link-content">
-                        <h3 data-t="chan3">Отзывы</h3>
-                        <p>@repaamorza</p>
-                    </div>
-                    <i data-lucide="chevron-right" class="arrow"></i>
+            <a href="https://t.me/ruchammodeals" class="link-card" target="_blank">
+                <div class="link-icon"><i data-lucide="shield-check"></i></div>
+                <div class="link-info">
+                    <h3 id="guarantees-title">Ручения</h3>
+                    <p>@ruchammodeals</p>
                 </div>
             </a>
 
-            <a href="https://t.me/ammodeals" target="_blank" class="link-item border-segments">
-                <div class="glass-card-inner flex items-center gap-4 p-3">
-                    <div class="icon-box"><i data-lucide="user"></i></div>
-                    <div class="link-content">
-                        <h3 data-t="chan4">Личный контакт</h3>
-                        <p>@ammodeals</p>
-                    </div>
-                    <i data-lucide="chevron-right" class="arrow"></i>
+            <a href="https://t.me/ammodealsnews" class="link-card" target="_blank">
+                <div class="link-icon"><i data-lucide="message-square"></i></div>
+                <div class="link-info">
+                    <h3 id="news-title">Новостной канал</h3>
+                    <p>@ammodealsnews</p>
                 </div>
             </a>
         </section>
 
-        <section class="commission-box border-segments">
-            <div class="glass-card-inner p-6">
-                <div class="box-header flex items-center gap-4 mb-4">
-                    <div class="icon-circle"><i data-lucide="zap"></i></div>
-                    <h2 class="text-xl font-black italic" data-t="commissionTitle">Гарант сделок</h2>
+        <section class="wallet-section">
+            <div class="wallet-card">
+                <div class="wallet-header">
+                    <div class="wallet-icon-box"><i data-lucide="zap" style="color: white;"></i></div>
+                    <div class="wallet-title">
+                        <h3 id="payment-title">Реквизиты для сделки</h3>
+                        <p class="wallet-network">Network: TON Mainnet</p>
+                    </div>
                 </div>
-                <p class="text-[13px] text-white/50 mb-4" data-t="commissionText">Безопасность ваших активов — мой главный приоритет. Работаю честно и быстро.</p>
-                <div class="tag-blue"><span data-t="commissionRate">Комиссия — 2%</span></div>
-            </div>
-        </section>
+                
+                <div style="margin-bottom: 15px;">
+                    <p class="stat-label" id="wallet-name-label" style="text-align: left; margin-bottom: 5px;">Имя кошелька</p>
+                    <div class="wallet-address-box">
+                        <span class="wallet-address-text">ammodeals.ton</span>
+                    </div>
+                </div>
 
-        <section class="steps-section">
-            <h2 class="section-title" data-t="howItWorksTitle">Как проходят сделки</h2>
-            <div class="steps-list space-y-2" id="steps-container"></div>
-        </section>
-
-        <section class="wallet-section border-segments">
-            <div class="glass-card-inner p-5">
-                <p class="section-label mb-3" data-t="paymentTitle">Реквизиты</p>
-                <div class="wallet-box">
-                    <code id="wallet-address">UQAZUifFf0eqc8rvMT6SS5RzQelEFSk2AHl93-jAMrsxhprl</code>
-                    <button onclick="copyWallet()" id="copy-btn" data-t="copy">Copy</button>
+                <div>
+                    <p class="stat-label" id="wallet-address-label" style="text-align: left; margin-bottom: 5px;">Адрес кошелька</p>
+                    <div class="wallet-address-box">
+                        <span class="wallet-address-text">UQAZUifFf0eqc8rvMT6SS5RzQelEFSk2AHl93-jAMrsxhprl</span>
+                        <button class="copy-btn" id="copy-btn" onclick="copyWallet()">
+                            <i data-lucide="copy"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <footer class="footer-action">
-            <a href="https://t.me/ammodeals" target="_blank" class="main-btn shimmer">
-                <span data-t="contactBtn">Связаться с ammodeals</span>
-            </a>
-            <p class="copyright">© ammodeals 2026</p>
-        </footer>
+        <a href="https://t.me/ammodeals" class="contact-btn" target="_blank">
+            <span id="contact-btn-text">Связаться с гарантом</span>
+        </a>
+
+        <footer id="footer-text">© ammodeals Guarantor</footer>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
